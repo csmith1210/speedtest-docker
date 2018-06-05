@@ -5,7 +5,7 @@ RUN chmod +x /tmp/install.sh
 RUN /tmp/install.sh
 RUN rm /tmp/install.sh
 
-RUN echo 'Speed Test $(date +"%D %T"):\n'
+RUN printf "\nSpeed Test $(date +'%D %T')\n"
 
 ENTRYPOINT ["/usr/local/bin/SpeedTest","--test-server", "ohcn.OST.myvzw.com:8080"]
 CMD ["--output", "text"]
