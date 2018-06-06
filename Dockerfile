@@ -14,5 +14,4 @@ RUN cd /tmp/src && \
 ADD run.sh /home/
 RUN chmod +x /home/run.sh
 
-RUN printf "\nSpeed Test $(date +'%D %T')\n"
 ENTRYPOINT ["/home/run.sh"]
